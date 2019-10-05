@@ -126,19 +126,7 @@
                     <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>fabric8-maven-plugin</artifactId>
-                <version>${fabric8.maven.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>fmp</id>
-                        <goals>
-                            <goal>resource</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+
         </plugins>
     </build>
 

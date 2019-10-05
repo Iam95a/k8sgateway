@@ -6,9 +6,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@RestController
 public class K8sgatewayApplication {
 
     public static void main(String[] args) {
@@ -28,4 +31,9 @@ public class K8sgatewayApplication {
                         .uri("lb://download-server")
                 ).build();
     }
+    @RequestMapping("/nihao")
+    public String nihao(){
+        return  "nihao";
+    }
+
 }
